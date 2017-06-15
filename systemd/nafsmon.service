@@ -1,0 +1,8 @@
+[Unit]
+Description=nafsmon
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/nafsmon
+Restart=on-abort
