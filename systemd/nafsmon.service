@@ -4,5 +4,8 @@ Description=nafsmon
 [Service]
 Type=simple
 User=root
-ExecStart=/usr/bin/nafsmon
+ExecStart=/usr/bin/nafsmon.py
 Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
