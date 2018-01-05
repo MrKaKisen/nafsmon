@@ -1,9 +1,9 @@
 # nafsmon
 # versionCheck - check for new versions
-# Copyright Vilhelm Prytz 2017
+# Copyright Vilhelm Prytz 2018
 
 from version import version
-from daemonlog import log
+import logging
 import requests
 
 def checkUpdate():

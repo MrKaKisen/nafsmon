@@ -1,4 +1,4 @@
 #!/bin/bash
 # nafsmon
-# Installation script
+# Upgrader script
 # Copyright Vilhelm Prytz 2018
