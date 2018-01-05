@@ -18,9 +18,8 @@ def checkUpdate():
             logging.info("NOTICE: There is a new version available! New version: " + r.text.split("\n")[0])
             performUpgrade()
     else:
-        log("CRITICAL", "Couldn't receive latest version (on GitHub). Quitting.")
+        logging.critical("Couldn't receive latest version (on GitHub). Quitting.")
         exit(1)
 
 # perform the auto upgrade
 def performUpgrade():
-    

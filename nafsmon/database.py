@@ -19,5 +19,3 @@ def dbConnection(sqlfile):
 
     cursor = connection.cursor()
     return connection, cursor, True
-
-def setupTimeScheduleDb(config):

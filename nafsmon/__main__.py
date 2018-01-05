@@ -6,7 +6,7 @@
 from version import version
 from versionCheck import checkUpdate
 from fileParser import *
-from database import setupTimeScheduleDb
+from preSetup import *
 import os
 
 # logging
@@ -43,9 +43,9 @@ def main():
     config = getConfig()
 
     # check if time schedule is here
-    if not os.path.isfile(config.timeSchedulePath):
+    if not os.path.isfile(config.serverListConfPath):
         logging.info("Time schedule file was not found. performing first time setup.")
-        setupTimeScheduleDb(config)
+        setupServerListConfDb(config)
 
     # run the daemon
     runDaemon(config)

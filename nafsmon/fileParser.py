@@ -17,7 +17,9 @@ class Config(object):
         parser.read(configFile)
 
         try:
-            self.timeSchedulePath = parser.get("nafsmon", "timeSchedulePath")
+            self.serverListConfPath = parser.get("nafsmon", "serverListConfPath")
+            self.serverLogPath = parser.get("nafsmon", "serverLogPath")
+
         except Exception:
             logging.exception("Could not read the configuration.")
             logging.critical("Could not read the configuration. Please check your configuration.")
